@@ -8,5 +8,8 @@ public class TestMain {
 
         CSVFileReaderTest csvFileReaderTest = new CSVFileReaderTest();
         csvFileReaderTest.runTests();
+
+        IntegrationTest integrationTest = new IntegrationTest();
+        integrationTest.runTests();
     }
 }
