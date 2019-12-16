@@ -12,6 +12,9 @@ public class TestMain {
         CSVConverterTests csvConverterTests = new CSVConverterTests();
         csvConverterTests.runTests();
 
+        UserInterfaceImplTests userInterfaceImplTests = new UserInterfaceImplTests();
+        userInterfaceImplTests.runTests();
+
         IntegrationTest integrationTest = new IntegrationTest();
         integrationTest.runTests();
     }

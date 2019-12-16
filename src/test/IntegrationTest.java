@@ -8,9 +8,9 @@ import java.util.ArrayList;
 import java.util.List;
 import java.util.stream.Collectors;
 
-class IntegrationTest extends Test{
+class IntegrationTest extends Test {
 
-    public void runTests(){
+    public void runTests() {
         /**
         * Set up the list of inputs we want to give
         * */
@@ -67,7 +67,7 @@ class IntegrationTest extends Test{
         List<String> inputs;
         Integer inputCounter;
 
-        UITester(List<String> inputs){
+        UITester(List<String> inputs) {
             inputCounter = 0;
             this.inputs = inputs;
         }
@@ -82,7 +82,7 @@ class IntegrationTest extends Test{
             outputs.add(pageString(pageSize,pageNumber));
         }
 
-        public String pageString(int pageSize, int pageNumber){
+        public String pageString(int pageSize, int pageNumber) {
             return "pageSize: " + pageSize + " pageNumber: " + pageNumber;
         }
 

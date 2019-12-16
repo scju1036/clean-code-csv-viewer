@@ -6,7 +6,7 @@ import com.exxeta.exception.EmptyFileException;
 
 import java.util.List;
 
-public class CSVConverterTests extends Test{
+public class CSVConverterTests extends Test {
 
     public void runTests() {
         testConvert();
@@ -22,9 +22,11 @@ public class CSVConverterTests extends Test{
         );
         boolean success = true;
 
-        // execute test
         try {
+            // execute test
             CSVData csvData = CSVConverter.convert(mockContent);
+
+            // verify results
             success = success && csvData.getHeader().size() == 5;
             success = success && csvData.getHeader().equals(List.of("Name", "Vorname", "Strasse", "Ort", "Alter"));
             success = success && csvData.getContent().size() == 2;
@@ -48,10 +50,11 @@ public class CSVConverterTests extends Test{
         List<String> mockContent = List.of();
         boolean success = false;
 
-        // execute test
         try {
+            // execute test
             CSVData csvData = CSVConverter.convert(mockContent);
         } catch (EmptyFileException ex) {
+            // verify results
             success = true;
         }
 

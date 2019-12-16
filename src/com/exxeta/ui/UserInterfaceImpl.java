@@ -26,7 +26,7 @@ public class UserInterfaceImpl implements UserInterface {
         return scanner.nextLine();
     }
 
-    private List<Integer> calculateMaxCharactersPerColumn(CSVData csvData, int currentIndex, int stopCondition) {
+    public static List<Integer> calculateMaxCharactersPerColumn(CSVData csvData, int currentIndex, int stopCondition) {
         List<Integer> maxCharactersPerColumn = new ArrayList(Collections.nCopies(csvData.getHeader().size(), Integer.MIN_VALUE));
         for (int j = 0; j < csvData.getHeader().size(); j++) {
             maxCharactersPerColumn.set(j, Math.max(maxCharactersPerColumn.get(j), csvData.getHeader().get(j).length()));
