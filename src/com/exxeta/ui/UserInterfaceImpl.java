@@ -12,18 +12,12 @@ public class UserInterfaceImpl implements UserInterface {
     }
 
     public void printPage(CSVData csvData, int pageSize, int pageNumber) {
-        try {
-            int currentIndex = 1 + pageNumber * pageSize;
-            int stopCondition =  Math.min(currentIndex + pageSize, csvData.getContent().size() + 1);
-            Runtime.getRuntime().exec("clear");
-            List<Integer> maxCharactersPerColumn = calculateMaxCharactersPerColumn(csvData, currentIndex, stopCondition);
-            printLine(csvData.getHeader(), maxCharactersPerColumn);
-            printSeparator(maxCharactersPerColumn);
-            printContent(csvData.getContent(), currentIndex, stopCondition, maxCharactersPerColumn);
-        } catch (IOException ex) {
-            ex.printStackTrace();
-        }
-
+        int currentIndex = 1 + pageNumber * pageSize;
+        int stopCondition = Math.min(currentIndex + pageSize, csvData.getContent().size() + 1);
+        List<Integer> maxCharactersPerColumn = calculateMaxCharactersPerColumn(csvData, currentIndex, stopCondition);
+        printLine(csvData.getHeader(), maxCharactersPerColumn);
+        printSeparator(maxCharactersPerColumn);
+        printContent(csvData.getContent(), currentIndex, stopCondition, maxCharactersPerColumn);
     }
 
     public String promptUserInput() {
