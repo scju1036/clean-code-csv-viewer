@@ -9,6 +9,9 @@ public class TestMain {
         CSVFileReaderTest csvFileReaderTest = new CSVFileReaderTest();
         csvFileReaderTest.runTests();
 
+        CSVConverterTests csvConverterTests = new CSVConverterTests();
+        csvConverterTests.runTests();
+
         IntegrationTest integrationTest = new IntegrationTest();
         integrationTest.runTests();
     }

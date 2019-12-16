@@ -4,8 +4,6 @@ import com.exxeta.domain.ArgumentReader;
 import com.exxeta.domain.CSVSettings;
 import com.exxeta.exception.FileNameMissingException;
 
-import static org.junit.jupiter.api.Assertions.*;
-
 class ArgumentReaderTest extends Test{
 
     public void runTests(){
