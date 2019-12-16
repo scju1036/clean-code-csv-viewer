@@ -4,7 +4,7 @@ import com.exxeta.exception.FileNameMissingException;
 
 public class ArgumentReader {
 
-    private static int DEFAULT_PAGE_SIZE = 3;
+    public static int DEFAULT_PAGE_SIZE = 3;
 
     public static CSVSettings getCSVSettings(String[] arguments) throws FileNameMissingException {
         if (arguments != null && arguments.length > 0) {
