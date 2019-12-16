@@ -16,6 +16,8 @@ public class CSVFileReader {
         catch (IOException ex) {
             ex.printStackTrace();
         }
+
+        csv.removeIf(s -> s.isEmpty());
         return csv;
     }
 }

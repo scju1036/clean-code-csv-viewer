@@ -10,12 +10,9 @@ public class CSVData {
 
     HashMap<Integer, List<String>> content;
 
-    List<Integer> maxCharactersPerColumn;
-
     public CSVData() {
         this.header = new ArrayList<>();
         this.content = new HashMap<>();
-        this.maxCharactersPerColumn = new ArrayList<>();
     }
 
     public List<String> getHeader() {
@@ -34,11 +31,4 @@ public class CSVData {
         this.content = content;
     }
 
-    public List<Integer> getMaxCharactersPerColumn() {
-        return maxCharactersPerColumn;
-    }
-
-    public void setMaxCharactersPerColumn(List<Integer> maxCharactersPerColumn) {
-        this.maxCharactersPerColumn = maxCharactersPerColumn;
-    }
 }
